@@ -1,0 +1,44 @@
+<!--
+  Generated template for the LogInPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-grid>
+  <ion-row>
+    <ion-col offset-sm-4 col-sm-4 offset-md-4 col-md-4 offset-lg-4 col-lg-4>
+      <h4>Inicio de sesión</h4>
+      <form [formGroup]="logInForm" (ngSubmit)="onSubmit()">
+          <div>
+            <ion-list>
+              <ion-item>
+                <ion-label floating>Nombre de usuario</ion-label>
+                <ion-input id="username" formControlName="username" type="text" class="validate" [ngClass]="{ 'is-invalid': submitted && f.username.errors }"></ion-input>
+                <div *ngIf="submitted && f.username.errors">
+                  <div *ngIf="f.username.errors.required">*El nombre de usuario es requerido</div>
+                </div>
+              </ion-item>
+              
+              <ion-item>
+                <ion-label floating>Contraseña</ion-label>
+                <ion-input id="password" formControlName="password" type="password" class="validate" [ngClass]="{ 'is-invalid': submitted && f.password.errors }"></ion-input>
+                <div *ngIf="submitted && f.password.errors">
+                  <p>{{f.password.errors.required}}</p>
+                  <div *ngIf="f.password.errors.required">*La contraseña es requerida</div>
+                  <div *ngIf="f.password.errors.minlength">*La contraseña debe ser por lo menos de 6 caracteres</div>
+                </div>
+              </ion-item>        
+            </ion-list>
+          </div>          
+      </form>   
+      <button (click)="checkUser()" ion-button icon-end>
+        Iniciar sesión
+        <ion-icon name="send"></ion-icon>
+      </button>   
+      <button (click)="aux()" ion-button>
+        Crear cuenta
+      </button>
+    </ion-col>
+  </ion-row>
+</ion-grid>

@@ -1,14 +1,45 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
+<ion-grid>
+  <ion-row>
+    <ion-col col-sm-12 col-md-12 col-lg-12>
+      <ion-col col-sm-6 col-md-6 col-lg-6>
+        <ion-card (click)="goToFood()">
+          <img src="../../assets/imgs/salad.jpg"/>
+          <ion-card-content>
+            <p>
+              Seleccione los alimentos que te gustaría consumir.
+            </p>
+          </ion-card-content>
+        </ion-card>   
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
-</ion-content>
+        <ion-card (click)="goToMeals()">
+          <img src="../../assets/imgs/salad.jpg"/>
+          <ion-card-content>
+            <p>
+              Puedes personalizar los horarios en los cuales puedes comer.
+            </p>
+          </ion-card-content>
+        </ion-card>   
+      </ion-col>
+
+      <ion-col col-sm-6 col-md-6 col-lg-6>
+        <ion-card (click)="goToTracing()">
+          <img src="../../assets/imgs/salad.jpg"/>
+          <ion-card-content>
+            <p>
+              Puedes seguir el seguimiento de tus dietas.
+            </p>
+          </ion-card-content>
+        </ion-card> 
+
+        <ion-card (click)="goToDiets()">
+          <img src="../../assets/imgs/salad.jpg"/>
+          <ion-card-content>
+            <p>
+              Consulta la dieta preparada para el día de hoy.
+            </p>
+          </ion-card-content>
+        </ion-card>     
+      </ion-col>
+    </ion-col>       
+  </ion-row>
+</ion-grid>
